@@ -46,7 +46,7 @@ it('Teste se quando passado parâmetros diferentes entre si, os dois objetos tam
   expect(productDetails('string, strong')[0]).not.toBe(productDetails('string, strong')[1]);
 });
 it('Teste se os dois productIds terminam com 123.', () => {
-  expect(productDetails('string, strong')[0].details.productId && productDetails('string, strong')[1].details.productId).toMatch('123');
+  expect(productDetails('string, strong')[0].details.productId.endsWith("123") && productDetails('string, strong')[1].details.productId.endsWith("123")).toBe(true);
 });
 
 });
