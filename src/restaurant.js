@@ -97,7 +97,8 @@ let createMenu = (objeto) => {
   const menuzao = {
     fetchMenu: () => objeto,
     consumption: [],
-    order: (string) => this.consumption.push(string),
+    order: (string) => menuzao.consumption.push(string), 
+    pay: 
   };
   return menuzao;
 };
@@ -107,4 +108,7 @@ module.exports = createMenu;
 let teste = createMenu({
   food: { coxinha: 3.90, sanduiche: 9.90 },
   drinks: { agua: 3.90, cerveja: 6.90 } });
-  console.log(teste);
+  // console.log(Object.keys(teste.fetchMenu()));
+
+ teste.order('coxinha');
+  console.log(teste.consumption);
