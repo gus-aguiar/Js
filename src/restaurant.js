@@ -105,9 +105,26 @@ let createMenu = (objeto) => {
 
 module.exports = createMenu;
 
-let teste = createMenu({
+let teste2 = createMenu({
   food: { coxinha: 3.90, sanduiche: 9.90 },
   drinks: { agua: 3.90, cerveja: 6.90 } });
   // console.log(Object.keys(teste.fetchMenu()));
 
-  console.log(Object.values(teste.fetchMenu()));
+  // teste.fetchMenu().food.coxinha = 'xablau';
+  // console.log(teste2.fetchMenu().food.coxinha);
+
+teste2.order('coxinha');
+
+  let precoTeste = () => {
+for (let index = 0; index < teste2.consumption.length; index += 1) {
+let soma = 0;
+  if (teste2.consumption[index] === 'coxinha') {
+    soma += teste2.fetchMenu().food.coxinha;
+    }
+    if (teste2.consumption[index] === 'agua') {
+      soma += teste2.fetchMenu().food.agua;
+      }
+      return soma;
+} 
+};
+// console.log(teste2.fetchMenu().food.coxinha);
