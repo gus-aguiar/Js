@@ -115,7 +115,7 @@ let teste2 = createMenu({
 
 teste2.order('coxinha');
 
-  let precoTeste = () => {
+let pay = () => {
 for (let index = 0; index < teste2.consumption.length; index += 1) {
 let soma = 0;
   if (teste2.consumption[index] === 'coxinha') {
